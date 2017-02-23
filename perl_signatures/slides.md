@@ -1,5 +1,7 @@
 ### Perl 5 Signatures
 
+<img src="http://madrid.pm.org/static/madrid-pm.png">
+
 [Madrid.pm](http://madrid.pm.org/)
 
 2017-02-23
