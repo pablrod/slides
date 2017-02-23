@@ -1,0 +1,355 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Params_Validate {
+	label="Params::Validate";
+	"Params::Validate::BEGIN@11";
+	"Params::Validate::BEGIN@5";
+	"Params::Validate::BEGIN@3";
+	"Params::Validate::BEGIN@12";
+	"Params::Validate::BEGIN@6";
+	"Params::Validate::BEGIN@14";
+	"Params::Validate::BEGIN@10";
+}
+subgraph cluster_Carp {
+	label="Carp";
+	"Carp::BEGIN@603";
+	"Carp::BEGIN@5";
+	"Carp::BEGIN@590";
+	"Carp::BEGIN@61";
+	"Carp::BEGIN@172";
+	"Carp::_fetch_sub";
+	"Carp::BEGIN@6";
+	"Carp::BEGIN@610";
+	"Carp::BEGIN@132";
+	"Carp::BEGIN@73";
+	"Carp::BEGIN@49";
+	"Carp::BEGIN@3";
+	"Carp::BEGIN@4";
+}
+subgraph cluster_Params_Validate_Constants {
+	label="Params::Validate::Constants";
+	"Params::Validate::Constants::BEGIN@3";
+	"Params::Validate::Constants::BEGIN@4";
+}
+subgraph cluster_Module_Runtime {
+	label="Module::Runtime";
+	"Module::Runtime::BEGIN@289";
+	"Module::Runtime::check_module_name";
+	"Module::Runtime::BEGIN@116";
+	"Module::Runtime::_is_string";
+	"Module::Runtime::BEGIN@120";
+	"Module::Runtime::CORE:subst";
+	"Module::Runtime::CORE:qr";
+	"Module::Runtime::module_notional_filename";
+	"Module::Runtime::BEGIN@296";
+	"Module::Runtime::CORE:regcomp";
+	"Module::Runtime::import";
+	"Module::Runtime::require_module";
+	"Module::Runtime::is_module_name";
+	"Module::Runtime::CORE:match";
+}
+subgraph cluster_Try_Tiny_ScopeGuard {
+	label="Try::Tiny::ScopeGuard";
+	"Try::Tiny::ScopeGuard::BEGIN@161";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::BEGIN@8";
+	"vars::BEGIN@7";
+	"vars::import";
+	"vars::CORE:match";
+	"vars::BEGIN@3";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::BEGIN@2";
+	"constant::BEGIN@90";
+	"constant::BEGIN@141";
+	"constant::BEGIN@40";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@24";
+	"constant::CORE:match";
+	"constant::import";
+	"constant::CORE:subst";
+	"constant::BEGIN@65";
+	"constant::CORE:qr";
+	"constant::CORE:regcomp";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::bits";
+	"strict::BEGIN@14";
+	"strict::CORE:regcomp";
+	"strict::CORE:match";
+	"strict::unimport";
+}
+subgraph cluster_Internals {
+	label="Internals";
+	"Internals::SvREADONLY";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_Params_Validate_XS {
+	label="Params::Validate::XS";
+	"Params::Validate::XS::validate_pos";
+	"Params::Validate::XS::BEGIN@3";
+	"Params::Validate::XS::BEGIN@4";
+	"Params::Validate::XS::BEGIN@38";
+	"Params::Validate::XS::BEGIN@8";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@9";
+	"List::Util::BEGIN@31";
+	"List::Util::BEGIN@10";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@3";
+	"main::BEGIN@4";
+	"main::RUNTIME";
+	"main::CORE:say";
+	"main::CORE:ftfile";
+	"main::BEGIN@0";
+	"main::BEGIN@8";
+	"main::BEGIN@7";
+	"main::ExponentiallyDistributedRandomNumberFromUniformRandomNumber";
+	"main::NULL";
+	"main::BEGIN@5";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::method_changed_in";
+}
+subgraph cluster_feature {
+	label="feature";
+	"feature::__common";
+	"feature::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::_mkMask";
+	"warnings::CORE:regcomp";
+	"warnings::register_categories";
+	"warnings::CORE:match";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::CORE:match";
+	"Exporter::import";
+}
+subgraph cluster_utf8 {
+	label="utf8";
+	"utf8::import";
+}
+subgraph cluster_Module_Implementation {
+	label="Module::Implementation";
+	"Module::Implementation::BEGIN@128";
+	"Module::Implementation::BEGIN@129";
+	"Module::Implementation::BEGIN@6";
+	"Module::Implementation::_build_loader";
+	"Module::Implementation::CORE:subst";
+	"Module::Implementation::BEGIN@5";
+	"Module::Implementation::__ANON__[Module/Implementation.pm:52]";
+	"Module::Implementation::build_loader_sub";
+	"Module::Implementation::_copy_symbols";
+	"Module::Implementation::try {...} ";
+	"Module::Implementation::_load_implementation";
+	"Module::Implementation::BEGIN@8";
+	"Module::Implementation::BEGIN@9";
+}
+subgraph cluster_Sub_Util {
+	label="Sub::Util";
+	"Sub::Util::BEGIN@7";
+	"Sub::Util::BEGIN@8";
+	"Sub::Util::set_subname";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::catch";
+	"Try::Tiny::BEGIN@2";
+	"Try::Tiny::BEGIN@8";
+	"Try::Tiny::BEGIN@13";
+	"Try::Tiny::try";
+	"Try::Tiny::BEGIN@16";
+	"Try::Tiny::BEGIN@10";
+	"Try::Tiny::BEGIN@7";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+"strict::import" -> "strict::bits";
+"strict::unimport" -> "strict::bits";
+"Module::Implementation::try {...} " -> "Module::Runtime::require_module";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@132";
+"main::BEGIN@3" -> "strict::CORE:match";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@24";
+"Try::Tiny::BEGIN@16" -> "Sub::Util::BEGIN@7";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@8";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::CORE:qr";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@2";
+"Params::Validate::BEGIN@12" -> "Params::Validate::Constants::BEGIN@4";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@2";
+"Params::Validate::BEGIN@14" -> "vars::BEGIN@3";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::BEGIN@289";
+"vars::BEGIN@7" -> "warnings::register::import";
+"constant::BEGIN@4" -> "warnings::register::import";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@65";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::CORE:qr";
+"Module::Runtime::require_module" -> "Params::Validate::XS::BEGIN@38";
+"main::BEGIN@4" -> "warnings::CORE:match";
+"Carp::BEGIN@603" -> "warnings::unimport";
+"Carp::BEGIN@6" -> "warnings::unimport";
+"Module::Implementation::BEGIN@129" -> "warnings::unimport";
+"Exporter::import" -> "Exporter::CORE:match";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@4";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@10";
+"Params::Validate::Constants::BEGIN@3" -> "strict::import";
+"Sub::Util::BEGIN@7" -> "strict::import";
+"Carp::BEGIN@4" -> "strict::import";
+"Try::Tiny::BEGIN@7" -> "strict::import";
+"List::Util::BEGIN@9" -> "strict::import";
+"Params::Validate::XS::BEGIN@3" -> "strict::import";
+"Params::Validate::BEGIN@5" -> "strict::import";
+"vars::BEGIN@8" -> "strict::import";
+"constant::BEGIN@3" -> "strict::import";
+"Module::Implementation::BEGIN@5" -> "strict::import";
+"main::BEGIN@3" -> "strict::import";
+"Module::Implementation::build_loader_sub" -> "Module::Implementation::_build_loader";
+"warnings::register_categories" -> "warnings::_mkMask";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@4";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@5";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@3";
+"main::BEGIN@4" -> "warnings::CORE:regcomp";
+"Try::Tiny::try" -> "Sub::Util::set_subname";
+"Try::Tiny::catch" -> "Sub::Util::set_subname";
+"Module::Runtime::is_module_name" -> "Module::Runtime::_is_string";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@90";
+"Module::Runtime::module_notional_filename" -> "Module::Runtime::check_module_name";
+"main::NULL" -> "main::BEGIN@4";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@172";
+"constant::import" -> "constant::CORE:regcomp";
+"main::BEGIN@8" -> "Module::Implementation::build_loader_sub";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@6";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::BEGIN@296";
+"Module::Runtime::is_module_name" -> "Module::Runtime::CORE:regcomp";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::CORE:regcomp";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@49";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@603";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@40";
+"feature::import" -> "feature::__common";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@5";
+"main::NULL" -> "main::BEGIN@0";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@10";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::BEGIN@116";
+"Module::Implementation::_copy_symbols" -> "Module::Implementation::CORE:subst";
+"Module::Implementation::_build_loader" -> "Module::Implementation::CORE:subst";
+"Module::Implementation::__ANON__[Module/Implementation.pm:52]" -> "Module::Implementation::_load_implementation";
+"Try::Tiny::try" -> "Module::Implementation::try {...} ";
+"main::BEGIN@8" -> "Module::Implementation::__ANON__[Module/Implementation.pm:52]";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@12";
+"constant::import" -> "constant::CORE:match";
+"constant::import" -> "constant::CORE:subst";
+"main::RUNTIME" -> "main::ExponentiallyDistributedRandomNumberFromUniformRandomNumber";
+"Module::Runtime::module_notional_filename" -> "Module::Runtime::CORE:subst";
+"Params::Validate::BEGIN@14" -> "vars::BEGIN@8";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@590";
+"Module::Runtime::require_module" -> "Params::Validate::XS::BEGIN@4";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@3";
+"main::NULL" -> "main::BEGIN@7";
+"main::BEGIN@3" -> "strict::BEGIN@14";
+"main::RUNTIME" -> "main::CORE:say";
+"Try::Tiny::BEGIN@13" -> "Exporter::import";
+"main::BEGIN@8" -> "Exporter::import";
+"Params::Validate::BEGIN@12" -> "Exporter::import";
+"Module::Implementation::BEGIN@9" -> "Exporter::import";
+"Params::Validate::XS::BEGIN@8" -> "Exporter::import";
+"Try::Tiny::BEGIN@10" -> "Exporter::import";
+"Params::Validate::BEGIN@10" -> "Exporter::import";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@610";
+"Carp::BEGIN@73" -> "Carp::_fetch_sub";
+"Carp::BEGIN@61" -> "Carp::_fetch_sub";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@9";
+"main::BEGIN@5" -> "utf8::import";
+"Params::Validate::BEGIN@14" -> "vars::BEGIN@7";
+"Module::Runtime::require_module" -> "Params::Validate::XS::BEGIN@3";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@6";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@128";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@5";
+"Try::Tiny::BEGIN@16" -> "UNIVERSAL::VERSION";
+"Module::Implementation::BEGIN@8" -> "UNIVERSAL::VERSION";
+"Try::Tiny::BEGIN@10" -> "UNIVERSAL::VERSION";
+"Params::Validate::BEGIN@14" -> "vars::import";
+"constant::import" -> "Internals::SvREADONLY";
+"constant::BEGIN@24" -> "Internals::SvREADONLY";
+"Module::Implementation::_load_implementation" -> "Try::Tiny::try";
+"Module::Runtime::is_module_name" -> "Module::Runtime::CORE:match";
+"Module::Runtime::import" -> "Module::Runtime::CORE:match";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@16";
+"main::NULL" -> "main::BEGIN@5";
+"vars::import" -> "vars::CORE:match";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@8";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@3";
+"main::BEGIN@7" -> "feature::import";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@11";
+"main::NULL" -> "main::BEGIN@8";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@61";
+"Module::Runtime::require_module" -> "Params::Validate::XS::BEGIN@8";
+"warnings::register::import" -> "warnings::register_categories";
+"main::BEGIN@0" -> "main::CORE:ftfile";
+"Try::Tiny::BEGIN@16" -> "List::Util::BEGIN@10";
+"main::NULL" -> "main::BEGIN@3";
+"main::BEGIN@8" -> "Params::Validate::BEGIN@14";
+"Try::Tiny::BEGIN@16" -> "List::Util::BEGIN@31";
+"Module::Runtime::check_module_name" -> "Module::Runtime::is_module_name";
+"main::BEGIN@3" -> "strict::CORE:regcomp";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@6";
+"Params::Validate::BEGIN@12" -> "Params::Validate::Constants::BEGIN@3";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::import";
+"Module::Implementation::_load_implementation" -> "Try::Tiny::catch";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::import";
+"Module::Runtime::require_module" -> "Module::Runtime::module_notional_filename";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@7";
+"Module::Implementation::BEGIN@8" -> "Module::Runtime::BEGIN@120";
+"Module::Runtime::require_module" -> "XSLoader::load";
+"Try::Tiny::BEGIN@16" -> "XSLoader::load";
+"constant::import" -> "mro::method_changed_in";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::ScopeGuard::BEGIN@161";
+"Module::Implementation::BEGIN@9" -> "Try::Tiny::BEGIN@13";
+"Module::Implementation::__ANON__[Module/Implementation.pm:52]" -> "Module::Implementation::_copy_symbols";
+"Try::Tiny::BEGIN@13" -> "Carp::BEGIN@73";
+"Carp::BEGIN@132" -> "strict::unimport";
+"Carp::BEGIN@610" -> "strict::unimport";
+"constant::BEGIN@65" -> "strict::unimport";
+"List::Util::BEGIN@31" -> "strict::unimport";
+"constant::BEGIN@141" -> "strict::unimport";
+"constant::BEGIN@90" -> "strict::unimport";
+"Module::Implementation::BEGIN@128" -> "strict::unimport";
+"Carp::BEGIN@590" -> "strict::unimport";
+"constant::BEGIN@40" -> "strict::unimport";
+"Try::Tiny::BEGIN@16" -> "Sub::Util::BEGIN@8";
+"main::ExponentiallyDistributedRandomNumberFromUniformRandomNumber" -> "Params::Validate::XS::validate_pos";
+"Try::Tiny::BEGIN@16" -> "List::Util::BEGIN@9";
+"Params::Validate::BEGIN@11" -> "Module::Implementation::BEGIN@129";
+"Try::Tiny::BEGIN@8" -> "warnings::import";
+"Params::Validate::Constants::BEGIN@4" -> "warnings::import";
+"Params::Validate::BEGIN@6" -> "warnings::import";
+"List::Util::BEGIN@10" -> "warnings::import";
+"main::BEGIN@4" -> "warnings::import";
+"Sub::Util::BEGIN@8" -> "warnings::import";
+"Module::Implementation::BEGIN@6" -> "warnings::import";
+"Params::Validate::XS::BEGIN@4" -> "warnings::import";
+"Carp::BEGIN@5" -> "warnings::import";
+"Try::Tiny::ScopeGuard::BEGIN@161" -> "constant::BEGIN@141";
+}
