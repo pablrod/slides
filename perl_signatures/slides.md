@@ -50,7 +50,7 @@ Fast, as long as you can use Params::Validate::XS. But...
 perl -d:NYTProf 03-params_validate.pl && nytprofhtml && firefox nytprof/index.html
 ```
 
-<iframe src="examples/nytprof/index.html" style="width: 100%;height: 600px;"></iframe>
+<iframe src="examples/nytprof/index.html" style="width: 100%;height: 600px;background-color: white;"></iframe>
 
 ---
 
