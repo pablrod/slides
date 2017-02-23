@@ -1,27 +1,28 @@
 ### Perl 5 Signatures
 
-Madrid.pm
+[Madrid.pm](http://madrid.pm.org/)
+
 2017-02-23
 
 Pablo Rodríguez González
-TODO Github, Twitter...
+
+[Github repository](https://github.com/pablrod/slides/tree/master/perl_signatures)
 
 ---
 
 ### Problem
 
-TODO Find example that does something real!
-
 ```perl
-sub Function {
-    my ($first_param, $second_param) = @_;
+sub ExponentialDistribution {
+    my ($lambda, $y) = @_;
     if (scalar @_ != 2) {
         die "This function only works with two arguments!";
     }
-    return $first_param / $second_param;
+    return - (1/$lambda) * log(y);
 }
 ```
 Too verbose and repetitive
+
 ---
 
 ### First solution
@@ -29,11 +30,13 @@ Too verbose and repetitive
 [Params::Validate](https://metacpan.org/pod/Params::Validate)
 
 ```perl
-sub Function {
-    my ($first_param, $second_param) = validate_pos(@_, 1, 1);
-    return $first_param / $second_param;
+sub ExponentialDistribution {
+    my ($lambda, $y) = validate_pos(@_, 1, 1);
+    return - (1/$lambda) * log(y);
 }
 ```
+
+Not bad
 
 ---
 
@@ -54,8 +57,8 @@ Available since perl 5.20
 ### Basic example
 
 ```perl
-sub Function ($first_param, $second_param) {
-    return $first_param / $second_param;
+sub ExponentialDistribution ($lambda, $y) {
+    return - (1/$lambda) * log(y);
 }
 ```
 
@@ -65,6 +68,16 @@ This checks for exactly two parameters with some value (even `undef`)
 ---
 
 ### Optional parameters and default values
+
+```perl
+sub ExponentialDistribution ($lambda, $y = rand) {
+    return - (1/$lambda) * log(y);
+}
+```
+
+```perl
+say "Random number exponentially distributed: " . ExponentialDistribution(1);
+```
 
 ---
 
@@ -123,9 +136,9 @@ websocket '/title' => sub ($c) {
 
 TODO Constant folding?
 TODO Show perlops?
-TODO Make server with live reloading
 TODO Show validation errors
 TODO Wishlist
 TODO Use signatures!!
+TODO Docker
 
 
