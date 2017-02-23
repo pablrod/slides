@@ -1,6 +1,6 @@
 ### Perl 5 Signatures
 
-<img src="http://madrid.pm.org/static/madrid-pm.png">
+<img src="http://madrid.pm.org/static/madrid-pm.png" style="border:0px;">
 
 [Madrid.pm](http://madrid.pm.org/)
 
@@ -250,7 +250,7 @@ Really? That was released on July 18, 2002 and received the last update in 2008-
 
 Don't worry! Use [perlbrew](https://perlbrew.pl/)
 
-<img src="https://perlbrew.pl/images/h1-beer.png">
+<img src="https://perlbrew.pl/images/h1-beer.png" style="border:0;">
 
 ```bash
 cpanm App::perlbrew
