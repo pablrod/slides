@@ -46,7 +46,11 @@ Not bad
 
 Fast, as long as you can use Params::Validate::XS. But... 
 
-TODO Nytprof with DateTime or something simpler
+```bash
+perl -d:NYTProf 03-params_validate.pl && nytprofhtml && firefox nytprof/index.html
+```
+
+<iframe src="examples/nytprof/index.html"></iframe>
 
 ---
 
