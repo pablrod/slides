@@ -134,6 +134,34 @@ sub BackwardsCompatibleFunctionIgnoreMiddleArgument ($first, $, $third) {
 
 ### How this is really different?
 
+Let's check B::Deparse output without signatures
+
+```bash
+perl -MO=Deparse,ExponentiallyDistributedRandomNumberFromUniformRandomNumber 01-without_any_signature.pl 
+```
+
+```perl
+use utf8;
+sub BEGIN {
+    use warnings;
+    use strict;
+    require 5.22.1;
+}
+use warnings;
+use strict;
+no feature ':all';
+use feature ':5.16';
+say 'Exponentially distributed random number: ', ExponentiallyDistributedRandomNumberFromUniformRandomNumber(1, 0.5);
+sub ExponentiallyDistributedRandomNumberFromUniformRandomNumber {
+    my($lambda, $y) = @_;
+    return -(1 / $lambda) * log($y);
+}
+```
+
+___
+
+### How this is really different?
+
 ```bash
 perl -MO=Concise,ExponentiallyDistributedRandomNumberFromUniformRandomNumber 01-without_any_signature.pl 
 ```
@@ -166,6 +194,36 @@ a              <1> log[t7] sK/1 ->b
 
 ---
 ### How this is really different?
+
+Let's check B::Deparse output with signatures
+
+```bash
+perl -MO=Deparse,ExponentiallyDistributedRandomNumberFromUniformRandomNumber 02-basic_signature.pl 
+```
+
+```perl
+use utf8;
+sub BEGIN {
+    use warnings;
+    use strict;
+    require 5.22.0;
+}
+use warnings;
+use strict;
+use feature 'current_sub', 'evalbytes', 'fc', 'say', 'signatures', 'state', 'switch', 'unicode_strings', 'unicode_eval';
+no feature 'array_base';
+say 'Exponentially distributed random number: ', ExponentiallyDistributedRandomNumberFromUniformRandomNumber(1, 0.5);
+sub ExponentiallyDistributedRandomNumberFromUniformRandomNumber {
+    die sprintf("Too many arguments for subroutine at %s line %d.\n", (caller)[1, 2]) unless @_ <= 2;
+    die sprintf("Too few arguments for subroutine at %s line %d.\n", (caller)[1, 2]) unless @_ >= 2;
+    my $lambda = $_[0];
+    my $y = $_[1];
+    ();
+    return -(1 / $lambda) * log($y);
+}
+```
+
+___
 
 ```bash
 perl -MO=Concise,ExponentiallyDistributedRandomNumberFromUniformRandomNumber 02-basic_signature.pl 
