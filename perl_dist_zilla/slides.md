@@ -14,9 +14,11 @@ Pablo Rodríguez González
 
 ### What is a Module?
 
-Reusable code
+# Reusable code.
 
-In Perl is as simple as this:
+___
+
+A Perl module is as simple as this:
 
 ```perl
 package Modulo;
@@ -26,7 +28,9 @@ sub DoSomething {
 1;
 ```
 
-Put this in a file called: Modulo.pm
+___
+
+Put the previous code in a file called: `Modulo.pm`
 
 And you can use this in your shell with:
 
@@ -35,6 +39,26 @@ perl -I. -MModulo -E Modulo::DoSomething;
 ```
 
 You can share your new Modulo.pm with your friends, by e-mail, p2p, ... 
+
+___
+
+O you can put this in a script: `my_script.pl`
+
+```perl
+use Modulo;
+
+Modulo::DoSomething
+
+```
+
+```bash
+perl -I. my_script.pl
+```
+
+___
+
+
+Perl: 29 years making easy things easy!
 
 ---
 
@@ -74,26 +98,32 @@ ___
 * CHANGES
 * LICENSE
 
+___
+
+### Multiple files
+
+Every .pm file is a module, but when you say Dist::Zilla, is more like a collection of .pm file working together
+
 ---
 
 ### How to share my module?
 
-Via CPAN!
+Via [CPAN](https://metacpan.org/)!
 
 Also if your module is open source, please consider using github, bitbucket or another social coding service. This way is easy for other to work with you and build great things together!
 
 ___
 
-### What I need to upload my module to CPAN?
+### What do I need to upload my module to CPAN?
 
 * A tar.gz file with my distribution
 * PAUSE ID
 
-PAUSE? Perl Authors Upload SErver
+PAUSE: Perl Authors Upload SErver
 
 ___
 
-### Where I can get a PAUSE ID?
+### Where can I get a PAUSE ID?
 
 [http://pause.perl.org/pause/query?ACTION=request_id](http://pause.perl.org/pause/query?ACTION=request_id)
 
@@ -120,6 +150,26 @@ Well, it does a lot of things!
 * Commit/Push to source control
 * ...
 
+___
+
+### CPAN Distribution Release Manager
+
+Think Dist::Zilla as a CPAN Distribution Release Manager
+
+Dist::Zilla is not a perl build system, Dist::Zilla uses other modules for building:
+
+* Module::Build
+* ExtUtils::MakeMaker
+* Module::Install
+
+___
+
+### Authors, authors, authors!
+
+Dist::Zilla is just for authors!
+
+Dist::Zilla is not needed for module installation (via cpan, cpanm, cpanp, ...)
+
 ---
 
 ### Dist::Zilla 101
@@ -127,7 +177,7 @@ Well, it does a lot of things!
 ```bash
 dzil new Modulo
 cd Modulo
-dzil build Modulo
+# Write your module
 dzil test Modulo
 dzil release Modulo
 ```
@@ -138,6 +188,14 @@ dzil release Modulo
 
 Dist::Zilla main file is dist.ini
 
+Basic dist.ini:
+
+```
+name = Modulo
+author = Pablo Rodríguez González
+license = MIT
+```
+
 ---
 
 ### Distribution using Dist::Zilla
@@ -146,11 +204,72 @@ Dist::Zilla can generate most parts for you
 
 Only with dist.ini you can get all the files needed to share and upload your module to CPAN
 
----
+___
 
-### Documentation using Pod::Weaver
+### Free things
 
-Pod::Weaver can
+* Generating META, MANIFEST, Build.PL, ...
+* Critic tests
+* Pod tests
+* Coverage
+* Tidying your code
+* Generating license
+* ...
+
+___
+
+### Everything is a plugin
+
+Dist::Zilla is a complete framework based on plugins
+
+You can add your own plugins or use from others
+
+Dist::Zilla plugins are just modules in the namespace: Dist::Zilla::Plugin
+
+___
+
+### How to use a plugin?
+
+Just add the name of the plugin to your dist.ini
+
+For example: Dist::Zilla::Plugin::UploadToCPAN
+
+```
+name = Modulo
+author = Pablo Rodríguez González
+license = MIT
+
+[UploadToCPAN]
+```
+
+___
+
+### Plugin bundles
+
+Plugins can be grouped in *bundles*
+
+For example: Dist::Zilla::PluginBundle::Git
+
+This plugins add support for commit, tagging, checking your code in a Git repository
+
+Using a bundle is as easy as adding: [@BundleName]
+
+```
+name = Modulo
+author = Pablo Rodríguez González
+license = MIT
+
+[UploadToCPAN]
+[@Git]
+```
+
+___
+
+### Personalized or per project set of bundles
+
+A lot of authors or projects make their own bundles:
+
+For example: Dist::Zilla::PluginBundle::DROLSKY
 
 ---
 
