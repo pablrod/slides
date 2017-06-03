@@ -221,8 +221,6 @@ ___
 
 ```perl
 
-
-
 my $iris = Data::Dataset::Classic::Iris::get(as => 'Data::Table');
 
 my ($train_dataset, $test_dataset) = SplitDataSetTrainAndTest($iris, 'species');
@@ -234,6 +232,9 @@ my $result = Predict($problem);
 $problem->addCol($result, "kNN Classified");
 $problem->addCol($species, 'Species');
 
+```
+___
+```perl
 
 sub SplitDataSetTrainAndTest {
     my ($dataset, $column_name) = @_;
@@ -248,6 +249,9 @@ sub SplitDataSetTrainAndTest {
     return ($dataset, $test_dataset);
 }
 
+```
+___
+```perl
 sub Predict {
     my ($problem_dataset) = @_;
     my $k = 3;
@@ -265,7 +269,9 @@ sub Predict {
     }
     return $result;
 }
-
+```
+___
+```perl
 sub GetkNN {
     my ($k, $dataset, $problem) = @_;
     my $next_data = $dataset->iterator();
@@ -751,6 +757,9 @@ for my $iter (0 .. 10) {
  AI::XGBoost::CAPI::XGBoosterUpdateOneIter($booster, $iter, $dtrain);
 }
 
+```
+___
+```perl
 my $out_len = 0;
 my $out_result = 0;
 
