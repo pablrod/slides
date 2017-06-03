@@ -1,0 +1,55 @@
+{
+   "abstract" : "Show html in a browser locally",
+   "author" : [
+      "Pablo Rodríguez González <pablo.rodriguez.gonzalez@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.422",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "HTML-Show",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.28"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.28"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Browser::Open" : "0",
+            "Path::Tiny" : "0",
+            "strict" : "0",
+            "utf8" : "0",
+            "warnings" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0",
+            "Test::Most" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/pablrod/p5-HTML-Show/issues"
+      },
+      "homepage" : "https://github.com/pablrod/p5-HTML-Show",
+      "repository" : {
+         "url" : "https://github.com/pablrod/p5-HTML-Show.git"
+      }
+   },
+   "version" : "0.001",
+   "x_serialization_backend" : "JSON::PP version 2.27300"
+}
